@@ -1,0 +1,59 @@
+package edubangerte.utah.coe.httpwww.test;
+
+import android.media.MediaPlayer;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private MediaPlayer mp;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button Leeroy = (Button) findViewById(R.id.Leeroy);
+        Button Dots = (Button) findViewById(R.id.Dots);
+        Button Leather = (Button) findViewById(R.id.Leather);
+        Button Run = (Button) findViewById(R.id.bigbadwolf);
+        Leeroy.setOnClickListener(this);
+        Dots.setOnClickListener(this);
+        Leather.setOnClickListener(this);
+        Run.setOnClickListener(this);
+    }
+    public void onClick(View v) {
+        int name=0;
+        switch (v.getId()){
+            case R.id.Leeroy:
+                name = R.raw.leeroy;
+                break;
+            case R.id.Dots:
+                name = R.raw.moredots;
+                break;
+            case R.id.bigbadwolf:
+                name = R.raw.run;
+                break;
+            case R.id.Leather:
+                name = R.raw.leatherbelt;
+        }
+
+        if (mp != null){
+            mp.release();
+        }
+        mp = MediaPlayer.create(this, name);
+        mp.start();
+    }
+    /*
+    private void setupMessageButton(int name) {
+        // Get reference to button
+        Button messageButton = (Button) findViewById(name);
+        messageButton.setOnClickListener(this);
+
+        //set the click listener to run code
+
+    }
+    */
+
+}
