@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WoW All-Stars</string>
+    <string name="save">Save</string>
+    <string name="set_as_notification_tone">Set as notification tone</string>
+    <string name="sound_saved_successfully">Sound saved successfully</string>
+    <string name="failed_to_save_sound">Failed to save sound</string>
+    <string name="notification_tone_set">Notification tone set</string>
+    <string name="failed_to_set_notification_tone">Failed to set notification tone</string>
+</resources>
